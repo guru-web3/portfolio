@@ -11,8 +11,17 @@ import { variants, dotVariants } from "@/components/home/testimonials/variants";
 import { useTestimonials } from "@/hooks/use-testimonials";
 import { DATA } from "@/data";
 
+type TestimonialItem = {
+  id: number;
+  name: string;
+  role: string;
+  content: string;
+  avatar: string;
+};
+
 export const TestimonialsSection = () => {
   const { sectionTitle, sectionDescription, items } = DATA.home.testimonials;
+  const list = items as readonly TestimonialItem[];
   const {
     currentIndex,
     direction,
@@ -20,15 +29,15 @@ export const TestimonialsSection = () => {
     prevTestimonial,
     setCurrentIndex,
     handleNavigation,
-  } = useTestimonials(items);
+  } = useTestimonials(list);
 
   const isMobile = useIsMobile();
 
-  if (!items.length) {
+  if (!list.length) {
     return null;
   }
 
-  const currentTestimonial = items[currentIndex] || items[0];
+  const currentTestimonial = list[currentIndex] ?? list[0]!;
 
   return (
     <section className="py-20 bg-background bg-gradient-to-b from-background to-content2">
@@ -119,7 +128,7 @@ export const TestimonialsSection = () => {
             )}
 
             <div className="flex items-center gap-2">
-              {items.map((_, index) => (
+              {list.map((_, index) => (
                 <motion.button
                   key={index}
                   animate={index === currentIndex ? "active" : "inactive"}
