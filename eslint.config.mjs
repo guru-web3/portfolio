@@ -1,5 +1,6 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import { fixupConfigRules, fixupPluginRules } from "@eslint/compat";
+import nextPlugin from "@next/eslint-plugin-next";
 import react from "eslint-plugin-react";
 import unusedImports from "eslint-plugin-unused-imports";
 import _import from "eslint-plugin-import";
@@ -42,13 +43,14 @@ export default defineConfig([globalIgnores([
     "!**/plopfile.js",
     "!**/react-shim.js",
     "!**/tsup.config.ts",
-]), {
+]),
+nextPlugin.flatConfig.recommended,
+{
     extends: fixupConfigRules(compat.extends(
         "plugin:react/recommended",
         "plugin:prettier/recommended",
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
-        "plugin:@next/next/recommended",
     )),
 
     plugins: {
@@ -153,4 +155,5 @@ export default defineConfig([globalIgnores([
             next: ["const", "let", "var"],
         }],
     },
-}]);
+},
+]);
