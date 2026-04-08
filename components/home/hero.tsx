@@ -1,7 +1,5 @@
 "use client";
 
-import type { PressEvent } from "@react-aria/interactions";
-
 import { motion } from "framer-motion";
 import { Button, Link } from "@heroui/react";
 import { Icon } from "@iconify/react";
@@ -18,7 +16,7 @@ export const HeroSection = ({
   title?: string;
   subtitle?: string;
 }) => {
-  const scrollToWork = (_e: PressEvent) => {
+  const scrollToWork = () => {
     const workSection = document.getElementById("work-section");
 
     if (workSection) {

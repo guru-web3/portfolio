@@ -27,9 +27,9 @@ export const ProfilePhoto = memo(function ProfilePhoto({
       `}
     >
       <Image
+        fill
         alt={alt}
         className="object-cover object-[center_8%]"
-        fill
         sizes="(max-width: 768px) min(280px, 92vw), 280px"
         src={src}
       />
