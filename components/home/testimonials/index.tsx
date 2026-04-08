@@ -22,11 +22,12 @@ export const TestimonialsSection = () => {
     handleNavigation,
   } = useTestimonials(items);
 
+  const isMobile = useIsMobile();
+
   if (!items.length) {
     return null;
   }
 
-  const isMobile = useIsMobile();
   const currentTestimonial = items[currentIndex] || items[0];
 
   return (

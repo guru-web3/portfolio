@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://gururamu.vercel.app"),
   title: {
     default: DATA.home.hero.name,
     template: `%s | ${DATA.home.hero.name}`,

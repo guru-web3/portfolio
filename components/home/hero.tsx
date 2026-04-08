@@ -11,12 +11,10 @@ import { DATA } from "@/data";
 
 export const HeroSection = ({
   showBackground = true,
-  name = DATA.home.hero.name,
   title = DATA.home.hero.title,
   subtitle = DATA.home.hero.subtitle,
 }: {
   showBackground?: boolean;
-  name?: string;
   title?: string;
   subtitle?: string;
 }) => {
@@ -45,8 +43,7 @@ export const HeroSection = ({
             initial={{ opacity: 0, y: 20 }}
             transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            Hi, I&apos;m {name} &mdash; I design &amp; code modern web
-            experiences.
+            {title}
           </motion.h1>
 
           <motion.p
@@ -55,7 +52,7 @@ export const HeroSection = ({
             initial={{ opacity: 0, y: 20 }}
             transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            {title}: {subtitle}
+            {subtitle}
           </motion.p>
 
           <motion.div
@@ -68,11 +65,11 @@ export const HeroSection = ({
               download
               aria-label="Download CV in PDF format"
               className="w-full sm:w-auto"
-              href="/new CV.pdf"
+              href="/guru-ramu-resume.pdf"
             >
               <Button
                 fullWidth
-                aria-label="Downoald CV"
+                aria-label="Download CV"
                 color="primary"
                 endContent={<Icon icon="lucide:download" />}
                 size="lg"

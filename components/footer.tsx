@@ -54,10 +54,6 @@ export const Footer = () => {
                 <a href={`mailto:${contact.email}`}>{contact.email}</a>
               </li>
               <li className="flex items-center gap-2">
-                <Icon icon="lucide:phone" />
-                <a href={`tel:${contact.phone}`}>{contact.phone}</a>
-              </li>
-              <li className="flex items-center gap-2">
                 <Icon icon="lucide:map-pin" />
                 {contact.location}
               </li>

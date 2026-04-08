@@ -39,9 +39,9 @@ export const SkillsOverviewSection = () => {
               viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
             >
-              <Card className="border-none shadow-md ">
+              <Card className="border-none shadow-md">
                 <CardBody className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center gap-4 mb-3">
                     <div className={`p-3 rounded-full bg-${skill.color}-100`}>
                       <Icon
                         className={`w-6 h-6 text-${skill.color}-500`}
@@ -54,10 +54,15 @@ export const SkillsOverviewSection = () => {
                     </div>
                   </div>
                   <Progress
-                    className="h-2"
+                    className="h-2 mb-3"
                     color={skill.color}
                     value={skill.level}
                   />
+                  {"description" in skill && (
+                    <p className="text-foreground-500 text-sm leading-relaxed">
+                      {skill.description}
+                    </p>
+                  )}
                 </CardBody>
               </Card>
             </motion.div>

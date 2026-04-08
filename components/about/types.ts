@@ -26,7 +26,12 @@ export interface EducationItem {
   readonly icon?: string;
 }
 
-export interface ExperienceItem extends EducationItem {}
+export interface ExperienceItem {
+  readonly title: string;
+  readonly date: string;
+  readonly description: readonly string[];
+  readonly icon?: string;
+}
 
 export interface TechItem {
   readonly name: string;
