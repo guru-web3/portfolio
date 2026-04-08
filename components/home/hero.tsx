@@ -60,10 +60,11 @@ export const HeroSection = ({
             transition={{ delay: 0.6, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <Link
-              download
               aria-label="Download CV in PDF format"
               className="w-full sm:w-auto"
-              href="/guru-ramu-resume.pdf"
+              href="https://drive.google.com/file/d/1Ac9D655nkhTrKa-rrkXpFzfE0b-HRiWr/view?usp=sharing"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <Button
                 fullWidth
