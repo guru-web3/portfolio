@@ -13,5 +13,4 @@ pnpm build      # production build
 ```
 
 ## Content
-
 All portfolio data (experience, projects, skills, contact) lives in [`data/index.ts`](data/index.ts).
