@@ -2,7 +2,7 @@ export const DATA = {
   home: {
     hero: {
       name: "Guru Ramu",
-      title: "Lead Full-Stack Engineer | AI Agent Infrastructure x Web3",
+      title: "Senior Full-Stack Engineer | AI Agent Infrastructure x Web3",
       subtitle:
         "I build the infrastructure that lets AI agents operate autonomously in Web3 — from MCP credential servers and agentic wallets to machine-to-machine payment rails on MOCA Network.",
     },
@@ -54,7 +54,7 @@ export const DATA = {
   about: {
     profile: {
       name: "Guru Ramu",
-      title: "Lead Full-Stack Engineer | AI Agent Infrastructure x Web3",
+      title: "Senior Full-Stack Engineer | AI Agent Infrastructure x Web3",
       image: "/guru-profile.png",
       description: [
         "Full-Stack Web3 and AI Infrastructure Engineer with 8 years of experience building decentralized applications, agentic systems, and developer tooling. Currently at Animoca Brands leading AIRKit credential infrastructure and agentic wallet development on MOCA Network.",
@@ -73,7 +73,7 @@ export const DATA = {
     ],
     experience: [
       {
-        title: "Lead Full Stack Engineer — Animoca Brands - AIRKit & Credential Infrastructure",
+        title: "Senior Full Stack Engineer — Animoca Brands - AIRKit & Credential Infrastructure",
         date: "Jan 2025 - Present",
         icon: "mdi:briefcase",
         description: [
